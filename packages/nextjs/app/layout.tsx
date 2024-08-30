@@ -1,3 +1,4 @@
+import { Provider } from "./providers";
 import "@rainbow-me/rainbowkit/styles.css";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
@@ -14,7 +15,9 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
     <html suppressHydrationWarning>
       <body>
         <ThemeProvider enableSystem>
-          <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
+          <Provider>
+            <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
+          </Provider>
         </ThemeProvider>
       </body>
     </html>
