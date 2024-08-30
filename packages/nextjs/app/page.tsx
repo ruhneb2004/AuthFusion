@@ -1,70 +1,65 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
+import { italiana, pacifico } from "./assets/font";
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { Address } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
-  const { address: connectedAddress } = useAccount();
-
   return (
-    <>
-      <div className="flex items-center flex-col flex-grow pt-10">
-        <div className="px-5">
-          <h1 className="text-center">
-            <span className="block text-2xl mb-2">Welcome to</span>
-            <span className="block text-4xl font-bold">Scaffold-ETH 2</span>
-          </h1>
-          <div className="flex justify-center items-center space-x-2 flex-col sm:flex-row">
-            <p className="my-2 font-medium">Connected Address:</p>
-            <Address address={connectedAddress} />
+    <div className="h-[85vh] flex items-center p-12">
+      <div className="p-7 bg-yellow-200 rounded-2xl shadow-inner shadow-slate-800 w-full h-[70vh]">
+        <div className="w-full h-full flex">
+          <div className="rounded-xl rounded-r-none overflow-hidden bg-slate-600 w-7/12 relative shadow-lg shadow-black">
+            <Image
+              src="/WelcomePage.jpeg"
+              layout="fill"
+              alt="A representation of beauty in the chaos"
+              className="object-cover"
+            />
           </div>
-          <p className="text-center text-lg">
-            Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/nextjs/app/page.tsx
-            </code>
-          </p>
-          <p className="text-center text-lg">
-            Edit your smart contract{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              YourContract.sol
-            </code>{" "}
-            in{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/hardhat/contracts
-            </code>
-          </p>
-        </div>
-
-        <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
-          <div className="flex justify-center items-center gap-12 flex-col sm:flex-row">
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <BugAntIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Tinker with your smart contract using the{" "}
-                <Link href="/debug" passHref className="link">
-                  Debug Contracts
-                </Link>{" "}
-                tab.
-              </p>
+          <div className="bg-cyan-600 w-5/12 rounded-xl rounded-l-none p-10 ">
+            <div className={`text-6xl ${italiana.className} text-white text-center `}>
+              Welcome to the new <br /> age of verification
             </div>
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Explore your local transactions with the{" "}
-                <Link href="/blockexplorer" passHref className="link">
-                  Block Explorer
-                </Link>{" "}
-                tab.
-              </p>
+            <div className="text-center p-3 text-2xl text-slate-200 mt-10 tracking-tight leading-tight">
+              <span className={`${pacifico.className}`}>Secure</span>,{" "}
+              <span className={`${pacifico.className}`}>seamless</span>, and{" "}
+              <span className={`${pacifico.className}`}>user-friendly</span> authentication solutions bridging the gap
+              between Web2 and Web3.Join us on a journey to a more connected and secure digital world.
+            </div>
+            <div className="flex justify-center mt-14 ">
+              {/* Modal 1 => Daisy UI */}
+              <dialog id="my_modal_5" className="modal ">
+                <div className="modal-box w-8/12 max-w-5xl ">
+                  <h3 className="font-bold text-2xl">Before Continuing ⛔️</h3>
+                  <p className="py-4 text-lg leading-relaxed tracking-wide">
+                    The verification process is a one-time process. And this is done by creating an NFT using your gmail
+                    account credentials. This NFT will be used to verify your identity on the platform. And once this
+                    NFT is generated this cannot be transfered to another account. For you to use your same gmail
+                    account in this address you will have to mint this NFT again, which will inturn make this NFT
+                    invalid for auth purposes!
+                  </p>
+                  <div className="modal-action">
+                    <form method="dialog">
+                      <button className="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              <button
+                className="bg-amber-500 py-3 px-5 text-xl hover:rounded-lg transition-all hover:shadow-xl active:rounded-none"
+                onClick={() => {
+                  const modal = document.getElementById("my_modal_5") as HTMLDialogElement | null;
+                  modal?.showModal();
+                }}
+              >
+                Join The <span className={`${italiana.className} text-white `}>Revolution</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
