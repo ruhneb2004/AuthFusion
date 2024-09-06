@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { Anonymous_Pro, Italiana, Pacifico } from "next/font/google";
-=======
-import { Italiana, Pacifico } from "next/font/google";
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
 
 const italiana = Italiana({
   weight: "400",
