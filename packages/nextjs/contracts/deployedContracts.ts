@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   10: {
     GmailAuthTokenGenerator: {
-      address: "0x36fFd67dC7330A7C435E19a126549f67EDdC1067",
+      address: "0x1247536783968b13a1736867f7E058eFad49Fa4b",
       abi: [
         {
           inputs: [],

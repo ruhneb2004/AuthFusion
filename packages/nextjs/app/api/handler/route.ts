@@ -3,20 +3,23 @@ import { createWalletClient, http, publicActions, recoverMessageAddress } from "
 import { privateKeyToAccount } from "viem/accounts";
 import { mainnet } from "viem/chains";
 
+
 const privateKey = process.env.SIGNER_SECRET_KEY || "";
 
 const account = privateKeyToAccount(privateKey as `0x${string}`);
 console.log(account);
 
-export const walletClient = createWalletClient({
-  account,
-  chain: mainnet,
-  transport: http(),
-}).extend(publicActions);
+ 
 
 export const POST = async (req: NextRequest) => {
   const { mes } = await req.json();
   console.log(mes);
+
+  const walletClient = createWalletClient({
+    account,
+    chain: mainnet,
+    transport: http(),
+  }).extend(publicActions);
 
   const signature = await walletClient.signMessage({
     message: mes,
