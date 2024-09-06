@@ -45,7 +45,7 @@ const Home: NextPage = () => {
                       <button
                         className="btn w-72 h-14"
                         onClick={() => {
-                          signIn("google", { callbackUrl: "/textLink" });
+                          signIn("google", { callbackUrl: "/nftGeneratorPage" });
                         }}
                       >
                         Sign In With Gmail 🗿
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
                   modal?.showModal();
                 }}
               >
-                Join The <span className={`${italiana.className} text-white `}>Revolution</span>
+                Join The <span className={`${italiana.className} text-white`}>Revolution</span>
               </button>
             </div>
           </div>

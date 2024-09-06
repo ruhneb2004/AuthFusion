@@ -41,5 +41,11 @@
   "packageManager": "yarn@3.2.3",
   "engines": {
     "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "axios": "^1.7.6",
+    "next-auth": "^4.24.7",
+    "viem": "^2.21.0"
   }
 }
