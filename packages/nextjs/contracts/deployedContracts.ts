@@ -5,7 +5,6 @@
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
-<<<<<<< HEAD
   10: {
     GmailAuthTokenGenerator: {
       address: "0x36fFd67dC7330A7C435E19a126549f67EDdC1067",
@@ -520,20 +519,6 @@ const deployedContracts = {
       abi: [
         {
           inputs: [],
-=======
-  31337: {
-    YourContract: {
-      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-      abi: [
-        {
-          inputs: [
-            {
-              internalType: "address",
-              name: "_owner",
-              type: "address",
-            },
-          ],
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
           stateMutability: "nonpayable",
           type: "constructor",
         },
@@ -543,7 +528,6 @@ const deployedContracts = {
             {
               indexed: true,
               internalType: "address",
-<<<<<<< HEAD
               name: "owner",
               type: "address",
             },
@@ -595,15 +579,11 @@ const deployedContracts = {
               indexed: false,
               internalType: "address",
               name: "",
-=======
-              name: "greetingSetter",
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
               type: "address",
             },
             {
               indexed: false,
               internalType: "string",
-<<<<<<< HEAD
               name: "uri",
               type: "string",
             },
@@ -645,30 +625,6 @@ const deployedContracts = {
             },
           ],
           name: "_addressToUri",
-=======
-              name: "newGreeting",
-              type: "string",
-            },
-            {
-              indexed: false,
-              internalType: "bool",
-              name: "premium",
-              type: "bool",
-            },
-            {
-              indexed: false,
-              internalType: "uint256",
-              name: "value",
-              type: "uint256",
-            },
-          ],
-          name: "GreetingChange",
-          type: "event",
-        },
-        {
-          inputs: [],
-          name: "greeting",
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
           outputs: [
             {
               internalType: "string",
@@ -681,7 +637,6 @@ const deployedContracts = {
         },
         {
           inputs: [],
-<<<<<<< HEAD
           name: "_nextTokenId",
           outputs: [
             {
@@ -758,9 +713,6 @@ const deployedContracts = {
             },
           ],
           name: "getApproved",
-=======
-          name: "owner",
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
           outputs: [
             {
               internalType: "address",
@@ -772,7 +724,6 @@ const deployedContracts = {
           type: "function",
         },
         {
-<<<<<<< HEAD
           inputs: [
             {
               internalType: "address",
@@ -823,15 +774,6 @@ const deployedContracts = {
               internalType: "address",
               name: "",
               type: "address",
-=======
-          inputs: [],
-          name: "premium",
-          outputs: [
-            {
-              internalType: "bool",
-              name: "",
-              type: "bool",
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
             },
           ],
           stateMutability: "view",
@@ -841,7 +783,6 @@ const deployedContracts = {
           inputs: [
             {
               internalType: "string",
-<<<<<<< HEAD
               name: "uri",
               type: "string",
             },
@@ -968,44 +909,6 @@ const deployedContracts = {
               internalType: "bool",
               name: "",
               type: "bool",
-=======
-              name: "_newGreeting",
-              type: "string",
-            },
-          ],
-          name: "setGreeting",
-          outputs: [],
-          stateMutability: "payable",
-          type: "function",
-        },
-        {
-          inputs: [],
-          name: "totalCounter",
-          outputs: [
-            {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
-            },
-          ],
-          stateMutability: "view",
-          type: "function",
-        },
-        {
-          inputs: [
-            {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
-          ],
-          name: "userGreetingCounter",
-          outputs: [
-            {
-              internalType: "uint256",
-              name: "",
-              type: "uint256",
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
             },
           ],
           stateMutability: "view",
@@ -1013,7 +916,6 @@ const deployedContracts = {
         },
         {
           inputs: [],
-<<<<<<< HEAD
           name: "symbol",
           outputs: [
             {
@@ -1063,15 +965,11 @@ const deployedContracts = {
             },
           ],
           name: "transferFrom",
-=======
-          name: "withdraw",
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
         },
         {
-<<<<<<< HEAD
           inputs: [
             {
               internalType: "string",
@@ -1121,13 +1019,6 @@ const deployedContracts = {
         transferFrom:
           "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
       },
-=======
-          stateMutability: "payable",
-          type: "receive",
-        },
-      ],
-      inheritedFunctions: {},
->>>>>>> 44418fab5694cb817e4ea51485a8f4ec03f6f043
     },
   },
 } as const;
