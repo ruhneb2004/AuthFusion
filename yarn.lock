@@ -2168,6 +2168,7 @@ __metadata:
     "@uniswap/v2-sdk": ~3.0.1
     abitype: 1.0.5
     autoprefixer: ~10.4.12
+    axios: ^1.7.7
     blo: ~1.0.1
     burner-connector: ~0.0.8
     daisyui: 4.5.0
@@ -2177,6 +2178,7 @@ __metadata:
     eslint-plugin-prettier: ~4.2.1
     g: ^2.0.1
     next: ~14.0.4
+    next-auth: ^4.24.7
     next-themes: ~0.2.1
     nprogress: ~0.2.0
     postcss: ~8.4.16
@@ -4499,7 +4501,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.5.1":
+"axios@npm:^1.5.1, axios@npm:^1.7.7":
   version: 1.7.7
   resolution: "axios@npm:1.7.7"
   dependencies:

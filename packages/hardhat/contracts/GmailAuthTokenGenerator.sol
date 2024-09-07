@@ -28,6 +28,7 @@ contract GmailAuthTokenGenerator is ERC721, ERC721URIStorage {
         _setTokenURI(_nextTokenId, uri);
         _uriChecker[uri] = true;
         _nextTokenId++;
+        _addressToUri[msg.sender] = uri;
         emit GmailTokenGenerated(msg.sender, uri);
     }
 

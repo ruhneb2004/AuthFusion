@@ -24,7 +24,7 @@ export default function Home() {
   const getSignature = async () => {
     setFlag(true);
 
-    const response = await axios.post("http://localhost:3000/api/handler", {
+    const response = await axios.post("https://authfusion.vercel.app/api/handler", {
       mes: session.data?.user?.email,
     });
     console.log(response.data);

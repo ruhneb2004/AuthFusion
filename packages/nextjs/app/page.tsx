@@ -7,22 +7,19 @@ import { signIn } from "next-auth/react";
 
 const Home: NextPage = () => {
   return (
-    <div className="h-[85vh] flex items-center p-12">
-      <div className="p-7 bg-yellow-200 rounded-2xl shadow-inner shadow-slate-800 w-full h-[70vh]">
-        <div className="w-full h-full flex">
+    <div className="h-[85vh] flex items-center justify-center p-12">
+      <div className="p-7 bg-yellow-200 rounded-2xl shadow-inner shadow-slate-800 w-full h-[70vh] min-w-[450px]">
+        <div className="w-full h-full md:flex-row flex flex-col">
           <div className="rounded-xl rounded-r-none overflow-hidden bg-slate-600 w-7/12 relative shadow-lg shadow-black">
-            <Image
-              src="/WelcomePage.jpeg"
-              layout="fill"
-              alt="A representation of beauty in the chaos"
-              className="object-cover"
-            />
+            <Image src="/WelcomePage.png" fill alt="A representation of beauty in the chaos" className="object-cover" />
           </div>
-          <div className="bg-cyan-600 w-5/12 rounded-xl rounded-l-none p-10 ">
-            <div className={`text-6xl ${italiana.className} text-white text-center `}>
+          <div className="bg-cyan-600 md:w-5/12 rounded-xl md:rounded-l-none  p-10 flex flex-col justify-center">
+            <div
+              className={`text-4xl sm:text-5xl md:text-4xl lg:text-4xl xl:text-5xl ${italiana.className} text-white text-center `}
+            >
               Welcome to the new <br /> age of verification
             </div>
-            <div className="text-center p-3 text-2xl text-slate-200 mt-10 tracking-tight leading-tight">
+            <div className="text-center p-3 text-xl text-slate-200 mt-10 tracking-tight leading-tight md:hidden lg:block xl:text-2xl">
               <span className={`${pacifico.className}`}>Secure</span>,{" "}
               <span className={`${pacifico.className}`}>seamless</span>, and{" "}
               <span className={`${pacifico.className}`}>user-friendly</span> authentication solutions bridging the gap
