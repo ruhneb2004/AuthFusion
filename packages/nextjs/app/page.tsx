@@ -11,7 +11,12 @@ const Home: NextPage = () => {
       <div className="p-7 bg-yellow-200 rounded-2xl shadow-inner shadow-slate-800 w-full h-[70vh] min-w-[450px]">
         <div className="w-full h-full md:flex-row flex flex-col">
           <div className="rounded-xl rounded-r-none overflow-hidden bg-slate-600 w-7/12 relative shadow-lg shadow-black">
-            <Image src="/WelcomePage.png" fill alt="A representation of beauty in the chaos" className="object-cover" />
+            <Image
+              src={"/welcomePage.png"}
+              fill
+              alt="A representation of beauty in the chaos"
+              className="object-cover"
+            />
           </div>
           <div className="bg-cyan-600 md:w-5/12 rounded-xl md:rounded-l-none  p-10 flex flex-col justify-center">
             <div
